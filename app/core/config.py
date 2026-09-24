@@ -7,6 +7,7 @@ class Settings:
     redis_url: str
     cache_ttl_seconds: int
     cache_tasks_key: str
+    cache_categories_key: str
     cors_origins: list[str]
 
 
@@ -16,5 +17,6 @@ def get_settings() -> Settings:
         redis_url="redis://localhost:6379/0",
         cache_ttl_seconds=3600,  # 1 час базовое нормальное значение
         cache_tasks_key="cache:tasks_list",
+        cache_categories_key="cache:categories_list",
         cors_origins=["http://localhost:3000"]
     )
